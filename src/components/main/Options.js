@@ -9,7 +9,7 @@ class Options extends Component {
     render() {
         return (
             <div id="options">
-
+                <p>Options</p>
             </div>
         );
     }

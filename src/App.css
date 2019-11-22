@@ -33,8 +33,9 @@
 
 
 #profile {
-  display: block;
-  min-width: 100px;
+  position: absolute;
+  top: 0px;
+  min-width: 200px;
   min-height: 100px;
   max-width: 200px;
   max-height: 150px;
@@ -43,8 +44,10 @@
 }
 
 #teams{
+  position: absolute;
+  top: 101px;
   display: block;
-  min-width: 100px;
+  min-width: 200px;
   min-height: 600px;
   max-width: 200px;
   max-height: 1050px;
@@ -76,6 +79,21 @@
   max-height: 1050px;
   background-color: rgb(36, 17, 245);
   margin: 1px;
+  color: white;
+}
+
+#standUp {
+  position: absolute;
+  left: 20px;
+  top: 480px;
+  display: block;
+  min-width: 550px;
+  min-height: 100px;
+  max-width: 1200px;
+  max-height: 200px;
+  background-color: rgb(255, 255, 255);
+  margin: px;
+  border-radius: 50px;
 }
 
 

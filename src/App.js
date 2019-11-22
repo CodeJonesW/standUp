@@ -15,7 +15,7 @@ function App() {
           <Profile />
 
         </Col>
-        <Col md={10}>
+        <Col md={3} >
           <Options />
         </Col>
       </Row>

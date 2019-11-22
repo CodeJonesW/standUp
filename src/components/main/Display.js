@@ -9,7 +9,10 @@ class Options extends Component {
     render() {
         return (
             <div id="display">
-
+                <p>standUp Display</p>
+                <div id="standUp">
+                    Text box
+                </div>
             </div>
         );
     }
