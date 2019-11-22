@@ -20,3 +20,41 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+#profile {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 150px;
+  background-color: rgb(206, 29, 29);
+  margin: 1px;
+}
+
+#teams{
+  min-width: 100px;
+  min-height: 600px;
+  max-width: 200px;
+  max-height: 1050px;
+  background-color: rgb(29, 206, 70);
+  margin: 1px;
+}
+
+
+
+
+
+
+
+
+
