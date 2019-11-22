@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import StandUp from './StandUp'
-class Display extends Component {
+
+class StandUp extends Component {
     constructor(props) {
         super(props);
         this.state = {}
     }
-
     render() {
         return (
-            <div id="display">
-                <p> Display</p>
-                <StandUp />
+            <div id="standUp">
+
             </div>
         );
     }
 }
 
-export default Display;
+export default StandUp;
