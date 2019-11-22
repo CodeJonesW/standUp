@@ -5,9 +5,10 @@ class Options extends Component {
         super(props);
         this.state = {}
     }
+
     render() {
         return (
-            <div id="Options">
+            <div id="options">
 
             </div>
         );

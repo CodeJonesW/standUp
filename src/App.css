@@ -33,6 +33,7 @@
 
 
 #profile {
+  display: block;
   min-width: 100px;
   min-height: 100px;
   max-width: 200px;
@@ -42,11 +43,25 @@
 }
 
 #teams{
+  display: block;
   min-width: 100px;
   min-height: 600px;
   max-width: 200px;
   max-height: 1050px;
   background-color: rgb(29, 206, 70);
+  margin: 1px;
+}
+
+#options {
+  position: absolute;
+  left: 201px;
+  top: 0px;
+  display: block;
+  min-width: 600px;
+  min-height: 100px;
+  max-width: 500px;
+  max-height: 150px;
+  background-color: rgb(245, 226, 17);
   margin: 1px;
 }
 

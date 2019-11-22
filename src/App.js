@@ -10,8 +10,21 @@ import { Row, Col } from 'react-bootstrap'
 function App() {
   return (
     <div className="App">
-      <Profile />
-      <Teams />
+      <Row>
+        <Col md={2}>
+          <Profile />
+
+        </Col>
+        <Col md={10}>
+          <Options />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Teams />
+        </Col>
+      </Row>
+
     </div>
   );
 }
