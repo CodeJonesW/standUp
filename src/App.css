@@ -65,6 +65,19 @@
   margin: 1px;
 }
 
+#display {
+  position: absolute;
+  left: 201px;
+  top: 101px;
+  display: block;
+  min-width: 600px;
+  min-height: 600px;
+  max-width: 1200px;
+  max-height: 1050px;
+  background-color: rgb(36, 17, 245);
+  margin: 1px;
+}
+
 
 
 

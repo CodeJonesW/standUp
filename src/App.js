@@ -22,6 +22,7 @@ function App() {
       <Row>
         <Col>
           <Teams />
+          <Display />
         </Col>
       </Row>
 
