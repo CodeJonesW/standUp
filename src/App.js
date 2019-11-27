@@ -9,7 +9,7 @@ import { Row, Col } from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="App">
+    <div className="Application">
       <Row>
         <Col md={2}>
           <Profile />

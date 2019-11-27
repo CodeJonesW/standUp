@@ -35,47 +35,36 @@
 #profile {
   position: absolute;
   top: 0px;
-  min-width: 200px;
-  min-height: 100px;
-  max-width: 200px;
-  max-height: 150px;
+  width: 12.5em;
+  height: 10em;
   background-color: rgb(206, 29, 29);
   margin: 1px;
 }
 
 #teams{
   position: absolute;
-  top: 101px;
-  display: block;
-  min-width: 200px;
-  min-height: 600px;
-  max-width: 200px;
-  max-height: 1050px;
+  top: 6.1em;
+  display: flex;
+  width: 12.5em;
+  height: 40em;
   background-color: rgb(29, 206, 70);
   margin: 1px;
 }
 
 #options {
-  position: absolute;
-  left: 201px;
-  top: 0px;
-  display: block;
-  min-width: 600px;
-  min-height: 100px;
-  max-width: 500px;
-  max-height: 150px;
+  display: flex;
+  
+  height: 6em;
   background-color: rgb(245, 226, 17);
   margin: 1px;
 }
 
 #display {
-  position: absolute;
-  left: 201px;
-  top: 101px;
-  display: block;
-  min-width: 600px;
+  
+  display: flex;
+  min-width: 50em;
   min-height: 600px;
-  max-width: 1200px;
+  max-width: 90em;
   max-height: 1050px;
   background-color: rgb(36, 17, 245);
   margin: 1px;
@@ -84,12 +73,12 @@
 
 #standUp {
   position: absolute;
-  left: 20px;
-  top: 480px;
-  display: block;
-  min-width: 550px;
+  left: 15em;
+  top: 34em;
+  display: flex;
+  min-width: 50em;
   min-height: 100px;
-  max-width: 1200px;
+  max-width: 90em;
   max-height: 200px;
   background-color: rgb(255, 255, 255);
   margin: px;
