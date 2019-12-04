@@ -27,7 +27,33 @@
 
 
 
+#topBar {
+  align-items: center;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+}
 
+#mainDisplayAndTeamsRow {
+  /* align-items: center; */
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: row;
+  height: 100em;
+}
+
+#teamCol {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+#displayCol {
+  display: flex;
+  /* flex-direction: column; */
+  width: 80%;
+}
 
 
 
@@ -36,8 +62,8 @@
   /* position: absolute;
   top: 0px; */
   align-items: center;
-  width: 12.5em;
-  height: 10em;
+  width: 20%;
+  height: 100%;
   background-color: rgb(206, 29, 29);
   margin: 1px;
   display: flex;
@@ -51,8 +77,8 @@
   /* justify-content: center; */
   display: flex;
   flex-direction: column;
-  width: 12.5em;
-  height: 40em;
+  width: 100%;
+  height: 100%;
   background-color: rgb(29, 206, 70);
   margin: 1px;
 }
@@ -61,7 +87,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 6em;
+  width: 80%;
+  height: 100%;
   background-color: rgb(245, 226, 17);
   margin: 1px;
 }
@@ -69,30 +96,23 @@
 #display {
   
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
-  min-width: 50em;
-  min-height: 600px;
-  max-width: 90em;
-  max-height: 1050px;
+  width:100%;
   background-color: rgb(36, 17, 245);
   margin: 1px;
   color: white;
 }
 
 #standUp {
-  position: absolute;
-  left: 15em;
-  top: 34em;
-  display: flex;
   flex-direction: row;
-  min-width: 50em;
-  min-height: 100px;
-  max-width: 90em;
-  max-height: 200px;
+  /* justify-content: center; */
+    align-items: center;
+ width: 80%;
+  height: 20%;
   background-color: rgb(255, 255, 255);
-  margin: px;
+  margin: 1px;
   border-radius: 50px;
 }
 

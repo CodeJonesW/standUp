@@ -15,7 +15,7 @@ function App() {
         <Options />
       </div>
 
-      <div id="mainDisplayAndTeams">
+      <div id="mainDisplayAndTeamsRow">
         <div id="teamCol">
           <Teams />
         </div>
