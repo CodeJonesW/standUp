@@ -10,7 +10,7 @@ class Display extends Component {
     render() {
         return (
             <div id="display">
-                <p> Display</p>
+
                 <StandUp />
                 <StandUpForm />
             </div>
