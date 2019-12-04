@@ -41,18 +41,23 @@
   display: flex;
   flex-direction: row;
   height: 100em;
+  /* border-color: white;
+  border: line; */
 }
 
 #teamCol {
   display: flex;
   flex-direction: column;
   width: 20%;
+  /* margin: 1px; */
 }
 
 #displayCol {
+  margin: .01px;
   display: flex;
   /* flex-direction: column; */
   width: 80%;
+  /* margin: 1px; */
 }
 
 
@@ -65,7 +70,7 @@
   height: 100%;
   background-color: rgb(12, 16, 63);
   color: white;
-  margin: 1px;
+  /* margin: 1px; */
   display: flex;
   flex-direction: row;
 }
@@ -80,7 +85,7 @@
   width: 100%;
   height: 100%;
   background-color: rgb(15, 23, 17);
-  margin: 1px;
+  /* margin: 1px; */
   color: white;
 }
 
@@ -91,7 +96,7 @@
   width: 80%;
   height: 100%;
   background-color: rgb(186, 171, 3);
-  margin: 1px;
+  /* margin: 1px; */
   color: white;
 }
 
@@ -103,7 +108,7 @@
   align-items: center;
   width:100%;
   background-color: rgb(22, 17, 75);
-  margin: 1px;
+  
   color: white;
 }
 
