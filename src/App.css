@@ -1,28 +1,12 @@
-.App {
-  text-align: center;
+
+
+/* #root {
+  max-height: 70%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
-
-
+body {
+  max-height: 70%;
+} */
 
 
 
@@ -75,20 +59,6 @@
   flex-direction: row;
 }
 
-#teams{
-  /* position: absolute;
-  top: 6.1em; */
-  align-items: center;
-  /* justify-content: center; */
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(15, 23, 17);
-  /* margin: 1px; */
-  color: white;
-}
-
 #options {
   display: flex;
   flex-direction: column;
@@ -100,23 +70,34 @@
   color: white;
 }
 
+#teams{
+  align-items: center;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(15, 23, 17);
+  /* margin: 1px; */
+  color: white;
+}
+
+
 #display {
-  
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
   width:100%;
   background-color: rgb(22, 17, 75);
-  
   color: white;
 }
 
 #standUp {
   flex-direction: row;
   /* justify-content: center; */
-    align-items: center;
- width: 80%;
+  align-items: center;
+  width: 80%;
   height: 80%;
   background-color: rgb(104, 104, 104);
   margin: 15px;
@@ -127,8 +108,8 @@
 #standUpForm {
   flex-direction: row;
   /* justify-content: center; */
-    align-items: center;
- width: 80%;
+  align-items: center;
+  width: 80%;
   height: 10%;
   background-color: rgb(200, 210, 203);
   margin: 15px;
