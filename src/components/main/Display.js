@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StandUp from './StandUp'
+import StandUpForm from './StandUpForm'
 class Display extends Component {
     constructor(props) {
         super(props);
@@ -11,6 +12,7 @@ class Display extends Component {
             <div id="display">
                 <p> Display</p>
                 <StandUp />
+                <StandUpForm />
             </div>
         );
     }
