@@ -8,7 +8,7 @@ class StandUp extends Component {
     render() {
         return (
             <div id="standUp">
-
+                {/* <p> Display</p> */}
             </div>
         );
     }

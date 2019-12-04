@@ -1,28 +1,17 @@
-.App {
-  text-align: center;
+
+
+/* #root {
+  height: 100vh;
+} */
+
+body, html {
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
+.Application {
+  height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
-
-
 
 
 
@@ -57,6 +46,7 @@
   display: flex;
   /* flex-direction: column; */
   width: 80%;
+  /* height: 80vh; */
   /* margin: 1px; */
 }
 
@@ -67,7 +57,7 @@
   align-items: center;
   justify-content: center;
   width: 20%;
-  height: 100%;
+  /* height: 100%; */
   background-color: rgb(12, 16, 63);
   color: white;
   /* margin: 1px; */
@@ -75,51 +65,49 @@
   flex-direction: row;
 }
 
-#teams{
-  /* position: absolute;
-  top: 6.1em; */
-  align-items: center;
-  /* justify-content: center; */
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(15, 23, 17);
-  /* margin: 1px; */
-  color: white;
-}
-
 #options {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
-  height: 100%;
+  /* height: 100%; */
   background-color: rgb(186, 171, 3);
   /* margin: 1px; */
   color: white;
 }
 
-#display {
-  
+#teams{
+  align-items: center;
+  /* justify-content: center; */
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(15, 23, 17);
+  /* margin: 1px; */
+  color: white;
+}
+
+
+#display {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
   align-items: center;
   width:100%;
+  height: 100vh;
   background-color: rgb(22, 17, 75);
-  
   color: white;
 }
 
 #standUp {
   flex-direction: row;
-  /* justify-content: center; */
-    align-items: center;
- width: 80%;
-  height: 80%;
+  justify-content: center;
+  /* align-items: center; */
+  width: 80%;
+  height: 60vh;
   background-color: rgb(104, 104, 104);
-  margin: 15px;
+  margin: 2vh;
   border-radius: 50px;
 }
 
@@ -127,11 +115,11 @@
 #standUpForm {
   flex-direction: row;
   /* justify-content: center; */
-    align-items: center;
- width: 80%;
-  height: 10%;
+  align-items: center;
+  width: 80%;
+  height: 15vh;
   background-color: rgb(200, 210, 203);
-  margin: 15px;
+  margin: 2vh;
   border-radius: 50px;
 }
 

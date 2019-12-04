@@ -9,7 +9,8 @@ import { div, Col } from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="Application">
+
+    <div id="application">
       <div id="topBar" >
         <Profile />
         <Options />
