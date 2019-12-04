@@ -5,26 +5,24 @@ import Profile from './components/main/Profile'
 import Teams from './components/main/Teams'
 import Options from './components/main/Options'
 import Display from './components/main/Display'
-import { Row, Col } from 'react-bootstrap'
+import { div, Col } from 'react-bootstrap'
 
 function App() {
   return (
     <div className="Application">
-      <Row>
-        <Col md={2}>
-          <Profile />
+      <div id="topBar" >
+        <Profile />
+        <Options />
+      </div>
 
-        </Col>
-        <Col md={3} >
-          <Options />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+      <div id="mainDisplayAndTeams">
+        <div id="teamCol">
           <Teams />
+        </div>
+        <div id="displayCol">
           <Display />
-        </Col>
-      </Row>
+        </div>
+      </div>
 
     </div>
   );
