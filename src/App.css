@@ -105,23 +105,129 @@ body, html {
   justify-content: center;
   /* align-items: center; */
   width: 80%;
-  height: 60vh;
+  height: 40vh;
   background-color: rgb(104, 104, 104);
   margin: 2vh;
   border-radius: 50px;
 }
 
 
-#standUpForm {
+#standUpFormDiv {
   flex-direction: row;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   width: 80%;
-  height: 15vh;
+  height: 30vh;
   background-color: rgb(200, 210, 203);
-  margin: 2vh;
+
   border-radius: 50px;
+  padding: 10px;
 }
+
+
+
+.standUpFormInput {
+  border-radius: 10vh;
+  height: 3vh;
+  margin: 1px;
+
+}
+
+
+
+
+
+
+  #standUpFormDiv {
+  justify-content: center;
+  margin: 3vh;
+  padding: 3px;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /* overflow:scroll; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* height: 30vh; */
+  padding: 3px;
+  border-radius: 20px;
+  background-color: rgb(4, 6, 52);
+  }
+  #standUpForm {
+  width: 80vh;
+  /* height: 10vh; */
+  padding: 2px;
+  justify-content: center;
+  margin: 3vh;
+  padding: 3px;
+  /* flex-direction: row; */
+  /* justify-content: center;
+  align-items: center; */
+  align-content: center;
+  }
+  input, select, textarea {
+  /* margin-bottom: 10px; */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  }
+
+  input {
+  width: calc(100% - 10px);
+  padding: 5px;
+  }
+  select {
+  width: 100%;
+  padding: 7px 0;
+  background: transparent;
+  }
+  textarea {
+  width: calc(100% - 2px);
+  padding: 5px;
+  }
+  .item {
+  display: relative;
+  margin: 2px 0;
+  }
+
+  input:hover, select:hover, textarea:hover {
+  box-shadow: 0 0 5px 0 #095484;
+  }
+
+
+
+
+
+  .btn-block {
+ 
+  text-align: center;
+  }
+  button {
+  width: auto;
+  padding: 10px;
+  border: none;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px; 
+  background-color: #095484;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  }
+  button:hover {
+  background-color: #0666a3;
+  }
+  @media (min-width: 568px) {
+  .name-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+  .name-item input {
+  width: calc(50% - 20px);
+  }
+  }
 
 
 
