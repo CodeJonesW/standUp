@@ -150,7 +150,7 @@ body, html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* height: 30vh; */
+  height: 40vh;
   padding: 3px;
   border-radius: 20px;
   background-color: rgb(4, 6, 52);
@@ -167,32 +167,24 @@ body, html {
   align-items: center; */
   align-content: center;
   }
-  input, select, textarea {
-  /* margin-bottom: 10px; */
-  border: 1px solid #ccc;
+  textarea {
   border-radius: 3px;
   }
 
-  input {
-  width: calc(100% - 10px);
-  padding: 5px;
-  }
+
   select {
   width: 100%;
   padding: 7px 0;
   background: transparent;
   }
   textarea {
-  width: calc(100% - 2px);
+  width: 60vh;
   padding: 5px;
+  margin: 2px;
   }
   .item {
   display: relative;
   margin: 2px 0;
-  }
-
-  input:hover, select:hover, textarea:hover {
-  box-shadow: 0 0 5px 0 #095484;
   }
 
 
@@ -204,19 +196,19 @@ body, html {
   text-align: center;
   }
   button {
-  width: auto;
+  width: 20vh;
   padding: 10px;
   border: none;
   -webkit-border-radius: 5px; 
   -moz-border-radius: 5px; 
   border-radius: 5px; 
-  background-color: #095484;
-  font-size: 16px;
+  background-color: #636303;
+  font-size: 15px;
   color: #fff;
   cursor: pointer;
   }
   button:hover {
-  background-color: #0666a3;
+  background-color: #270759;
   }
   @media (min-width: 568px) {
   .name-item {

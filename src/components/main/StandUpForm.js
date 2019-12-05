@@ -10,23 +10,23 @@ class StandUpForm extends Component {
             <div id="standUpFormDiv">
                 <form id="standUpForm" action="/">
                     <div class="item">
-                        <label>Yesterday:</label>
-                        <textarea rows="1"></textarea>
+
+                        <textarea placeholder="Yesterday:" rows="1"></textarea>
                     </div>
                     <div class="item">
-                        <label>Today:</label>
-                        <textarea rows="1"></textarea>
+
+                        <textarea placeholder="Today:" rows="1"></textarea>
                     </div>
                     <div class="item">
-                        <label>Blockers:</label>
-                        <textarea rows="1"></textarea>
+
+                        <textarea placeholder="Blockers:" rows="1"></textarea>
                     </div>
                     <div class="item">
-                        <p>Additional comment(s):</p>
+                        <p>Additional comment(s): </p>
                         <textarea rows="1"></textarea>
                     </div>
                     <div class="btn-block">
-                        <button type="submit" href="/">Send Complaint to HR</button>
+                        <button type="submit" href="/">standUp</button>
                     </div>
                 </form>
             </div>
