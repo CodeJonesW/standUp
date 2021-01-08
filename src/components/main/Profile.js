@@ -8,7 +8,7 @@ class Profile extends Component {
     render() {
         return (
             <div id="profile">
-                <p>Profile</p>
+                <p>StandUp @</p>
             </div>
         );
     }

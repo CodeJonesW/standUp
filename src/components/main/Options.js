@@ -9,7 +9,14 @@ class Options extends Component {
     render() {
         return (
             <div id="options">
-                <p>Options</p>
+
+                <form>
+                    <label>Email:</label>
+                    <input type="email"></input>
+                    <label>Password:</label>
+                    <input type="password"></input>
+                    <button onClick={(e) => this.props.handleLogin(e)}>Login</button>
+                </form>
             </div>
         );
     }
