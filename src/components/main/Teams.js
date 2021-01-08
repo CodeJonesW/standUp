@@ -8,7 +8,7 @@ class Teams extends Component {
     render() {
         return (
             <div id="teams">
-                <p>Teams</p>
+                <p>Teams</p>    
             </div>
         );
     }
