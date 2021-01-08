@@ -20,7 +20,7 @@ class Display extends Component {
         return (
             <div id="display">
                 {this.state.standUps.map((x, index) => (
-                    <StandUp yesterday={x.yesterday} today={x.today} blocker={x.blocker} />
+                    <StandUp key={index} yesterday={x.yesterday} today={x.today} blocker={x.blocker} />
                 ))}
                 
                 <StandUpForm />

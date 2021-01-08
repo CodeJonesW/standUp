@@ -10,12 +10,12 @@ class Options extends Component {
         return (
             <div id="options">
 
-                <form>
+                <form onClick={(e) => this.props.handleLogin(e)}>
                     <label>Email:</label>
-                    <input type="email"></input>
+                    <input id="email" type="email"></input>
                     <label>Password:</label>
-                    <input type="password"></input>
-                    <button onClick={(e) => this.props.handleLogin(e)}>Login</button>
+                    <input id="password" type="password"></input>
+                    <button id="login">Login</button>
                 </form>
             </div>
         );

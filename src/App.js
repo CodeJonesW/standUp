@@ -1,10 +1,10 @@
-import React, { Component } from 'react';import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import Profile from './components/main/Profile'
 import Teams from './components/main/Teams'
 import Options from './components/main/Options'
 import Display from './components/main/Display'
-import { div, Col } from 'react-bootstrap'
+// import { div, Col } from 'react-bootstrap'
 
 
 
@@ -20,8 +20,24 @@ class App extends Component {
           .then(data => this.setState({ standUps: data }))
     }
 
-    handleLogin() {
-      console.log("handle login")
+    handleLogin(e) {
+      e.preventDefault()
+      if(e.target.id === "login"){
+      
+        let email = e.currentTarget.email.value
+        let pass = e.currentTarget.password.value
+        console.log(email, pass)
+        let user = {email: email, password: pass}
+
+        fetch("http://localhost:3000/api/login", {
+          method: "post", // *GET, POST, PUT, DELETE, etc.
+          body: JSON.stringify(user) 
+        }).then(data => {
+          console.log(data)
+        });
+
+      }
+     
     }
 
 
@@ -30,8 +46,8 @@ class App extends Component {
 
         <div id="application">
           <div id="topBar" >
-            <Profile handleLogin={this.handleLogin}/>
-            <Options />
+            <Profile />
+            <Options handleLogin={this.handleLogin}/>
           </div>
     
           <div id="mainDisplayAndTeamsRow">
