@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 
-class StandUp extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
-    render() {
-        return (
-            <div id="standUp">
-                {/* <p> Display</p> */}
-            </div>
-        );
-    }
-}
-
+function StandUp(props) {
+    return (
+        <ul id="standUp">
+            <li> yesterday: ${props.yesterday}</li>
+            <li> today: ${props.today}</li>
+            <li> blocker: ${props.blocker}</li>
+        </ul>
+    );
+  }
 export default StandUp;

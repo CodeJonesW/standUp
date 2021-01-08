@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import StandUp from './StandUp'
 import StandUpForm from './StandUpForm'
 
-// const PROXY = "https://cors-anywhere.herokuapp.com/"
-
 class Display extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +11,7 @@ class Display extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/standups')
+        fetch('http://localhost:3000/api/standup')
             .then(res => res.json())
             .then(data => this.setState({ standUps: data }))
     }
@@ -21,8 +19,10 @@ class Display extends Component {
     render() {
         return (
             <div id="display">
-
-                <StandUp standups={this.state.standUps} />
+                {this.state.standUps.map((x, index) => (
+                    <StandUp yesterday={x.yesterday} today={x.today} blocker={x.blocker} />
+                ))}
+                
                 <StandUpForm />
 
 
