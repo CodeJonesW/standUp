@@ -5,18 +5,22 @@ class Options extends Component {
         super(props);
         this.state = {}
     }
-
+  
     render() {
         return (
             <div id="options">
 
                 <form onClick={(e) => this.props.handleLogin(e)}>
-                    <label>Email:</label>
+                   
+                    <label style={{"margin": "5px"}}>Email:</label>
                     <input id="email" type="email"></input>
                     <label>Password:</label>
                     <input id="password" type="password"></input>
                     <button id="login">Login</button>
+                 
                 </form>
+
+                
             </div>
         );
     }

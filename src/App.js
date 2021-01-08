@@ -11,23 +11,22 @@ import Display from './components/main/Display'
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+          loggedIn: false
+        }
     }
 
     componentDidMount() {
-      fetch('http://localhost:3000/api/standUp')
+      fetch('http://localhost:3000/api/standUp/1')
           .then(res => res.json())
           .then(data => this.setState({ standUps: data}))
     }
 
-    handleLogin(e) {
+    handleLogin = (e) => {
       e.preventDefault()
       if(e.target.id === "login"){
       
-        let email = e.currentTarget.email.value
-        let pass = e.currentTarget.password.value
-        console.log(email, pass)
-        let user = {email: email, password: pass}
+        let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
 
         fetch("http://localhost:3000/api/login", {
           method: "post",
@@ -39,6 +38,11 @@ class App extends Component {
         .then(res => res.json())
         .then(data => {
           console.log(data)
+          this.setState(
+            { ...this.state,
+              userId: data.userId,
+              loggedIn: data.loggedInStatus
+            })
         });
 
       }
@@ -47,9 +51,9 @@ class App extends Component {
 
     handleSubmit(e){
       e.preventDefault()
+      console.log("HI")
 
-
-      // implement user id
+      // implement user id !!
       let newStandUp = {
         yesterday: e.currentTarget.yesterday.value,
         today: e.currentTarget.today.value,
@@ -76,8 +80,9 @@ class App extends Component {
 
         <div id="application">
           <div id="topBar" >
+          
             <Profile />
-            <Options handleLogin={this.handleLogin}/>
+            <Options loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
           </div>
     
           <div id="mainDisplayAndTeamsRow">
