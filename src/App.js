@@ -15,9 +15,9 @@ class App extends Component {
     }
 
     componentDidMount() {
-      fetch('http://localhost:3000/api/standup')
+      fetch('http://localhost:3000/api/standUp')
           .then(res => res.json())
-          .then(data => this.setState({ standUps: data }))
+          .then(data => console.log(data))
     }
 
     handleLogin(e) {
@@ -45,6 +45,25 @@ class App extends Component {
      
     }
 
+    handleSubmit(e){
+      e.preventDefault()
+      console.log(e.currentTarget)
+      console.log(e.currentTarget.yesterday.value)
+      console.log(e.currentTarget.blocker.value)
+      console.log(e.currentTarget.today.value)
+      // fetch("http://localhost:3000/api/standUp", {
+      //     method: "post",
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(user) 
+      //   })
+      //   .then(res => res.json())
+      //   .then(data => {
+      //     console.log(data)
+      //   });
+    }
+
 
     render() {
       return (
@@ -60,7 +79,7 @@ class App extends Component {
               <Teams />
             </div>
             <div id="displayCol">
-              <Display />
+              <Display handleSubmit={this.handleSubmit}/>
             </div>
           </div>
     

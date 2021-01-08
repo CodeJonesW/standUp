@@ -8,15 +8,15 @@ class StandUpForm extends Component {
     render() {
         return (
             <div id="standUpFormDiv">
-                <form id="standUpForm" action="/">
+                <form onSubmit={(e) => this.props.handleSubmit(e)} id="standUpForm" action="/">
                     <div className="item">
-                        <textarea placeholder="Yesterday:" rows="2"></textarea>
+                        <textarea id="yesterday" placeholder="Yesterday:" rows="2"></textarea>
                     </div>
                     <div className="item">
-                        <textarea placeholder="Today:" rows="2"></textarea>
+                        <textarea id="today" placeholder="Today:" rows="2"></textarea>
                     </div>
                     <div className="item">
-                        <textarea placeholder="Blockers:" rows="2"></textarea>
+                        <textarea id="blocker" placeholder="Blockers:" rows="2"></textarea>
                     </div>
                     <div className="item">
                         Seeking help?<input name="help" type="checkbox" />

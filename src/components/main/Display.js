@@ -10,11 +10,11 @@ class Display extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3000/api/standup')
-            .then(res => res.json())
-            .then(data => this.setState({ standUps: data }))
-    }
+    // componentDidMount() {
+    //     fetch('http://localhost:3000/api/standup')
+    //         .then(res => res.json())
+    //         .then(data => this.setState({ standUps: data }))
+    // }
 
     render() {
         return (
@@ -23,7 +23,7 @@ class Display extends Component {
                     <StandUp key={index} yesterday={x.yesterday} today={x.today} blocker={x.blocker} />
                 ))}
                 
-                <StandUpForm />
+                <StandUpForm handleSubmit={(e) => this.props.handleSubmit(e)}/>
 
 
             </div>
