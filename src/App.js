@@ -30,9 +30,14 @@ class App extends Component {
         let user = {email: email, password: pass}
 
         fetch("http://localhost:3000/api/login", {
-          method: "post", // *GET, POST, PUT, DELETE, etc.
+          method: "post",
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify(user) 
-        }).then(data => {
+        })
+        .then(res => res.json())
+        .then(data => {
           console.log(data)
         });
 
