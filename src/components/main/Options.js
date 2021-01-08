@@ -10,9 +10,9 @@ class Options extends Component {
         return (
             <div id="options">
 
-                <form onClick={(e) => this.props.handleLogin(e)}>
+                <form style={{"height": "10vh"}} onClick={(e) => this.props.handleLogin(e)}>
                    
-                    <label style={{"margin": "5px"}}>Email:</label>
+                    <label>Email:</label>
                     <input id="email" type="email"></input>
                     <label>Password:</label>
                     <input id="password" type="password"></input>

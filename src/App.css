@@ -17,7 +17,7 @@ body, html {
   align-items: center;
   display: flex;
   flex-direction: row;
-  height: 20%;
+  height: 10vh;
   /* justify-content: center; */
 }
 
@@ -48,8 +48,8 @@ body, html {
 #profile {
   align-items: center;
   justify-content: center;
-  width: 20%;
-  /* height: 100%; */
+  width: 20vw;
+  height: 10vh;
   background-color: rgb(12, 16, 63);
   color: white;
   display: flex;
@@ -61,6 +61,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   width: 80%;
+  /* height: 100%; */
   background-color: rgb(186, 171, 3);
   color: white;
 }
