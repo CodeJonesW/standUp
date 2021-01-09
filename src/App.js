@@ -13,7 +13,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          loggedIn: false
+          loggedIn: false,
+          signUp: false
         }
     }
 
@@ -89,6 +90,39 @@ class App extends Component {
 
     }
 
+    handleSignUp(e){
+      e.preventDefault()
+      if(e.target.id === "signUp"){
+      
+        let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
+
+        // fetch("http://localhost:3000/api/login", {
+        //   method: "post",
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify(user) 
+        // })
+        // .then(res => res.json())
+        // .then(userData => {
+        //   fetch('http://localhost:3000/api/standUp/1')
+        //   .then(res => res.json())
+        //   .then((data) => {
+        //     this.setState(
+        //       { ...this.state,
+        //         userId: userData.userId,
+        //         loggedIn: userData.loggedInStatus,
+        //         standUps: data
+        //       })
+        //   }) 
+        // })
+      }
+    }
+
+    switchSignUpLogin = (e) => {  
+      this.setState({...this.state, signUp: !this.state.signUp})
+    }
+
 
     render() {
       return (
@@ -96,7 +130,7 @@ class App extends Component {
         <div id="application">
           <div id="topBar" >
             <Profile />
-            <Options loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
+            <Options signUp={this.state.signUp} switchSignUpLogin={this.switchSignUpLogin} handleSignUp={this.handleSignUp} loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
           </div>
     
           <div id="mainDisplayAndTeamsRow">
