@@ -23,7 +23,7 @@ class StandUpForm extends Component {
                         PR needs Review<input name="PR" type="checkbox" />
                     </div>
                     <div className="btn-block">
-                        <button type="submit" href="/">standUp</button>
+                        <button type="submit" >standUp</button>
                     </div>
                 </form>
             </div>

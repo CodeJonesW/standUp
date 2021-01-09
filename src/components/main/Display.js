@@ -10,10 +10,6 @@ class Display extends Component {
     }
 
      
-
-
-  
-
     render() {
         if(!this.props.standUps){
             return (

@@ -12,13 +12,20 @@ class App extends Component {
     constructor(props) {
 
         super(props);
-        this.handleLogin = this.handleLogin.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleLogin = this.handleLogin.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
           loggedIn: false
         }
     }
 
+    componentDidUpdate() {
+      const loggedInUser = localStorage.getItem("user");
+      if (loggedInUser) {
+        const foundUser = JSON.parse(loggedInUser);
+        console.log(foundUser)
+      }
+    };
 
 
     handleLogin = (e) => {
@@ -53,9 +60,9 @@ class App extends Component {
      
     }
 
-    handleSubmit(e){
+    handleSubmit = (e) => {
       e.preventDefault()
-      console.log(this.state)
+      console.log(e.currentTarget)
 
       // implement user id !!
       if(!this.state.userId) {
@@ -78,7 +85,12 @@ class App extends Component {
           .then(res => res.json())
           .then(data => {
             console.log(data)
-          });
+          })
+          .then(() => {
+            fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
+            .then(res => res.json())
+            .then(data => this.setState({...this.state, standUps: data}))
+          });;
       }
 
     }
