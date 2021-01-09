@@ -4,6 +4,7 @@ import Profile from './components/main/Profile'
 import Teams from './components/main/Teams'
 import Options from './components/main/Options'
 import Display from './components/main/Display'
+import StandUpForm from './components/main/StandUpForm'
 // import { div, Col } from 'react-bootstrap'
 
 
@@ -112,6 +113,7 @@ class App extends Component {
             </div>
             <div id="displayCol">
               <Display standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
+              <StandUpForm handleSubmit={(e) => this.handleSubmit(e)}/>
             </div>
           </div>
     

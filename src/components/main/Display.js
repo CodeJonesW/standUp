@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import StandUp from './StandUp'
-import StandUpForm from './StandUpForm'
+
 
 class Display extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Display extends Component {
         if(!this.props.standUps){
             return (
                 <div id="display">
-                    <StandUpForm handleSubmit={(e) => this.props.handleSubmit(e)}/>     
+                    
                 </div>
             )
         } else {
@@ -26,7 +26,7 @@ class Display extends Component {
                 )
                 }, this)}  
               
-                <StandUpForm handleSubmit={(e) => this.props.handleSubmit(e)}/>
+                
             </div>
         );
     }
