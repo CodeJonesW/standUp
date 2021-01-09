@@ -43,7 +43,7 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(userData => {
-          fetch('http://localhost:3000/api/standUp/1')
+          fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
           .then(res => res.json())
           .then((data) => {
             this.setState(
@@ -90,32 +90,34 @@ class App extends Component {
 
     }
 
-    handleSignUp(e){
+    handleSignUp = (e) => {
+
+      console.log(e.target)
       e.preventDefault()
       if(e.target.id === "signUp"){
-      
+        
         let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
-
-        // fetch("http://localhost:3000/api/login", {
-        //   method: "post",
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //   },
-        //   body: JSON.stringify(user) 
-        // })
-        // .then(res => res.json())
-        // .then(userData => {
-        //   fetch('http://localhost:3000/api/standUp/1')
-        //   .then(res => res.json())
-        //   .then((data) => {
-        //     this.setState(
-        //       { ...this.state,
-        //         userId: userData.userId,
-        //         loggedIn: userData.loggedInStatus,
-        //         standUps: data
-        //       })
-        //   }) 
-        // })
+        console.log(user)
+        fetch("http://localhost:3000/api/users", {
+          method: "post",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(user) 
+        })
+        .then(res => res.json())
+        .then(userData => {
+          fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
+          .then(res => res.json())
+          .then((data) => {
+            this.setState(
+              { ...this.state,
+                userId: userData.userId,
+                loggedIn: userData.loggedInStatus,
+                standUps: data
+              })
+          }) 
+        })
       }
     }
 

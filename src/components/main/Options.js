@@ -34,8 +34,8 @@ class Options extends Component {
                         <input placeholder="Sign up with your Email:" id="email" type="email"></input>
                         <input placeholder="Your Password:" id="password" type="password"></input>
                         <input placeholder="Confirm Password:" id="passwordConfirm" type="password"></input>
-                        <button className="mybutton">  Sign Up</button>
-                        <button onClick={(e) => this.props.switchSignUpLogin(e)} className="mybutton"> Joined?</button>
+                        <button id="signUp" className="mybutton"> Sign Up</button>
+                        <button  onClick={(e) => this.props.switchSignUpLogin(e)} className="mybutton"> Joined?</button>
                     </form>
     
                     
