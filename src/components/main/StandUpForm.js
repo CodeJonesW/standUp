@@ -18,12 +18,12 @@ class StandUpForm extends Component {
                     <div className="item">
                         <textarea id="blocker" placeholder="Blockers:" rows="2"></textarea>
                     </div>
-                    <div className="item">
+                    {/* <div className="item">
                         Seeking help?<input name="help" type="checkbox" />
                         PR needs Review<input name="PR" type="checkbox" />
-                    </div>
+                    </div> */}
                     <div className="btn-block">
-                        <button type="submit" >standUp</button>
+                        <button id="formBtn" style={{"margin": "5%"}} type="submit" >standUp</button>
                     </div>
                 </form>
             </div>

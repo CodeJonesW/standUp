@@ -109,11 +109,11 @@ class App extends Component {
     
           <div id="mainDisplayAndTeamsRow">
             <div id="teamCol">
-              <Teams />
+              <StandUpForm handleSubmit={(e) => this.handleSubmit(e)}/>
             </div>
             <div id="displayCol">
               <Display standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
-              <StandUpForm handleSubmit={(e) => this.handleSubmit(e)}/>
+              
             </div>
           </div>
     
