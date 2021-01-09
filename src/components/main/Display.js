@@ -15,21 +15,25 @@ class Display extends Component {
   
 
     render() {
-        if(!this.props.standUps) return null
+        if(!this.props.standUps){
+            return (
+                <div id="display">
+                    <StandUpForm handleSubmit={(e) => this.props.handleSubmit(e)}/>     
+                </div>
+            )
+        } else {
         return (
             <div id="display">
-                
-                
-            
               {this.props.standUps.map((x, index) => {
                 return (
                     <StandUp key={index} yesterday={x.yesterday} today={x.today} blocker={x.blocker} />
                 )
-        }, this)}  
+                }, this)}  
               
-                <StandUpForm/>
+                <StandUpForm handleSubmit={(e) => this.props.handleSubmit(e)}/>
             </div>
         );
+    }
     }
 }
 

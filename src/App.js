@@ -10,17 +10,16 @@ import Display from './components/main/Display'
 
 class App extends Component {
     constructor(props) {
+
         super(props);
+        this.handleLogin = this.handleLogin.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
           loggedIn: false
         }
     }
 
-    componentDidMount() {
-      fetch('http://localhost:3000/api/standUp/1')
-          .then(res => res.json())
-          .then(data => this.setState({ standUps: data}))
-    }
+
 
     handleLogin = (e) => {
       e.preventDefault()
@@ -43,6 +42,11 @@ class App extends Component {
               userId: data.userId,
               loggedIn: data.loggedInStatus
             })
+        })
+        .then(() => {
+          fetch('http://localhost:3000/api/standUp/1')
+          .then(res => res.json())
+          .then(data => this.setState({...this.state, standUps: data}))
         });
 
       }
@@ -51,27 +55,32 @@ class App extends Component {
 
     handleSubmit(e){
       e.preventDefault()
-      console.log("HI")
+      console.log(this.state)
 
       // implement user id !!
-      let newStandUp = {
-        yesterday: e.currentTarget.yesterday.value,
-        today: e.currentTarget.today.value,
-        blocker: e.currentTarget.blocker.value,
-        userId: 1
+      if(!this.state.userId) {
+        alert("Please log in to submit standUps")
+      } else {
+        let newStandUp = {
+          yesterday: e.currentTarget.yesterday.value,
+          today: e.currentTarget.today.value,
+          blocker: e.currentTarget.blocker.value,
+          userId: this.state.userId
+        }
+  
+        fetch("http://localhost:3000/api/standUp", {
+            method: "post",
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newStandUp) 
+          })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+          });
       }
 
-      fetch("http://localhost:3000/api/standUp", {
-          method: "post",
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(newStandUp) 
-        })
-        .then(res => res.json())
-        .then(data => {
-          console.log(data)
-        });
     }
 
 
