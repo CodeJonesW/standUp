@@ -11,16 +11,14 @@ import StandUpForm from './components/main/StandUpForm'
 
 class App extends Component {
     constructor(props) {
-
         super(props);
-        // this.handleLogin = this.handleLogin.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
           loggedIn: false
         }
     }
 
     componentDidUpdate() {
+      console.log("updated")
       const loggedInUser = localStorage.getItem("user");
       if (loggedInUser) {
         const foundUser = JSON.parse(loggedInUser);
@@ -43,22 +41,19 @@ class App extends Component {
           body: JSON.stringify(user) 
         })
         .then(res => res.json())
-        .then(data => {
-          console.log(data)
-          this.setState(
-            { ...this.state,
-              userId: data.userId,
-              loggedIn: data.loggedInStatus
-            })
-        })
-        .then(() => {
+        .then(userData => {
           fetch('http://localhost:3000/api/standUp/1')
           .then(res => res.json())
-          .then(data => this.setState({...this.state, standUps: data}))
-        });
-
+          .then((data) => {
+            this.setState(
+              { ...this.state,
+                userId: userData.userId,
+                loggedIn: userData.loggedInStatus,
+                standUps: data
+              })
+          }) 
+        })
       }
-     
     }
 
     handleSubmit = (e) => {
@@ -84,14 +79,12 @@ class App extends Component {
             body: JSON.stringify(newStandUp) 
           })
           .then(res => res.json())
-          .then(data => {
-            console.log(data)
-          })
-          .then(() => {
+          .then(standUpData => {
+            console.log(standUpData)
             fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
             .then(res => res.json())
             .then(data => this.setState({...this.state, standUps: data}))
-          });;
+          })
       }
 
     }
@@ -102,7 +95,6 @@ class App extends Component {
 
         <div id="application">
           <div id="topBar" >
-          
             <Profile />
             <Options loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
           </div>

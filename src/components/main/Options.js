@@ -16,8 +16,8 @@ class Options extends Component {
                     <input id="email" type="email"></input>
                     <label>Password:</label>
                     <input id="password" type="password"></input>
-                    <button id="login">Login</button>
-                 
+                    <button className="mybutton" id="login">Login</button>
+                    <button className="mybutton">  Sign Up</button>
                 </form>
 
                 

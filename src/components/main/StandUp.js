@@ -5,7 +5,7 @@ function StandUp(props) {
         <ul id="standUp">
             <li> Yesterday: {props.yesterday}</li>
             <li> Today: {props.today}</li>
-            <li> bBlocker: {props.blocker}</li>
+            <li> Blocker: {props.blocker}</li>
         </ul>
     );
   }

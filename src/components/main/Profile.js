@@ -6,19 +6,11 @@ class Profile extends Component {
         this.state = {}
     }
     render() {
-        if(!this.props.logged){
             return (
                 <div id="profile">
-                    <p>StandUp @ <span>🔴 </span></p>
-                </div>
-            )
-        } else {
-            return (
-                <div id="profile">
-                    <p>StandUp @ <span>🟢 </span></p>
+                    <p>StandUp @ </p>
                 </div>
                 );
-        }
        
     }
 }
