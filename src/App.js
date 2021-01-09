@@ -106,15 +106,15 @@ class App extends Component {
           body: JSON.stringify(user) 
         })
         .then(res => res.json())
-        .then(userData => {
-          fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
+        .then(userData =>  {
+          fetch(`http://localhost:3000/api/standUp/${userData.id}`)
           .then(res => res.json())
-          .then((data) => {
+          .then((standUpData) => {
             this.setState(
               { ...this.state,
-                userId: userData.userId,
+                userId: userData.id,
                 loggedIn: userData.loggedInStatus,
-                standUps: data
+                standUps: standUpData
               })
           }) 
         })
