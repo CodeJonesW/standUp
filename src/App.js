@@ -14,7 +14,7 @@ class App extends Component {
         super(props);
         this.state = {
           loggedIn: false,
-          signUp: false
+          displaySignUp: false
         }
     }
 
@@ -107,12 +107,13 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(userData =>  {
-          fetch(`http://localhost:3000/api/standUp/${userData.id}`)
+          console.log(userData)
+          fetch(`http://localhost:3000/api/standUp/${userData.data.id}`)
           .then(res => res.json())
           .then((standUpData) => {
             this.setState(
               { ...this.state,
-                userId: userData.id,
+                userId: userData.data.id,
                 loggedIn: userData.loggedInStatus,
                 standUps: standUpData
               })
@@ -122,7 +123,7 @@ class App extends Component {
     }
 
     switchSignUpLogin = (e) => {  
-      this.setState({...this.state, signUp: !this.state.signUp})
+      this.setState({...this.state, displaySignUp: !this.state.displaySignUp})
     }
 
 
@@ -132,7 +133,7 @@ class App extends Component {
         <div id="application">
           <div id="topBar" >
             <Profile />
-            <Options signUp={this.state.signUp} switchSignUpLogin={this.switchSignUpLogin} handleSignUp={this.handleSignUp} loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
+            <Options signUp={this.state.displaySignUp} switchSignUpLogin={this.switchSignUpLogin} handleSignUp={this.handleSignUp} loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
           </div>
     
           <div id="mainDisplayAndTeamsRow">
