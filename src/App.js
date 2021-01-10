@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Profile from './components/main/Profile'
-import Teams from './components/main/Teams'
 import Options from './components/main/Options'
 import Display from './components/main/Display'
 import StandUpForm from './components/main/StandUpForm'
 // import { div, Col } from 'react-bootstrap'
-
+import Helpers from './js/api'
 
 
 class App extends Component {
@@ -120,7 +119,7 @@ class App extends Component {
       this.setState({...this.state, displaySignUp: !this.state.displaySignUp})
     }
 
-    handleSignOut = () => {
+    handleSignOut = (e) => {
       this.setState({displaySignUp: false, loggedIn: false, standUps: []})
     }
 
@@ -139,7 +138,7 @@ class App extends Component {
               <StandUpForm handleSubmit={(e) => this.handleSubmit(e)}/>
             </div>
             <div id="displayCol">
-              <Display standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
+              <Display deleteStandUp={Helpers.deleteStandUp} standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
               
             </div>
           </div>

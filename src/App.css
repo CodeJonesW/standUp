@@ -188,6 +188,26 @@ body, html {
   background-color: #270759;
   }
 
+
+  .myDeleteButton {
+    margin: 1px;
+    margin-top: 15px;
+    width: 50px;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    background-color: #636303;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .myDeleteButton:hover {
+    background-color: #270759;
+    }
+
 #formBtn {
   width: 80%;
   min-width: 80px;
