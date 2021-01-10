@@ -87,7 +87,6 @@ class App extends Component {
             .then(data => this.setState({...this.state, standUps: data}))
           })
       }
-
     }
 
     handleSignUp = (e) => {
@@ -108,16 +107,11 @@ class App extends Component {
         .then(res => res.json())
         .then(userData =>  {
           console.log(userData)
-          fetch(`http://localhost:3000/api/standUp/${userData.data.id}`)
-          .then(res => res.json())
-          .then((standUpData) => {
-            this.setState(
-              { ...this.state,
-                userId: userData.data.id,
-                loggedIn: userData.loggedInStatus,
-                standUps: standUpData
-              })
-          }) 
+          if(userData.msg){
+            alert(userData.msg)
+          } else {
+            alert("Account Created")
+          }
         })
       }
     }
