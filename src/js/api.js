@@ -29,6 +29,15 @@ const helpers = {
            }
          })
    },
+   updateStandUpById: async (standUpId) => {
+    return fetch(`http://localhost:3000/api/standUp/${standUpId}`, {
+       method: "POST",
+       headers: {
+         'Content-Type': 'application/json',
+         'Authorization': localStorage.getItem("token")
+       },
+     })
+},
 }
 
 

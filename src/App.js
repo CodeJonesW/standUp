@@ -22,7 +22,7 @@ class App extends Component {
         Helpers.refreshUserToken(token)
         .then(res => res.json())
         .then(data => {
-          console.log(data)
+          // console.log(data)
           this.setState({loggedIn: true, userId: data.userId, standUps: data.standUps})
           localStorage.setItem("token", data.newToken)
         })
@@ -77,9 +77,7 @@ class App extends Component {
 
     handleSubmit = (e) => {
       e.preventDefault()
-      // console.log(e.currentTarget)
 
-      // implement user id !!
       if(!this.state.userId) {
         alert("Please log in to submit standUps")
       } else {
@@ -163,6 +161,16 @@ class App extends Component {
     }
 
 
+    handleUpdateStandUp = (e) => {
+      let standUpId = e.currentTarget.id
+      Helpers.updateStandUpById(standUpId)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({...this.state, standUps: data.standUps})
+      })
+    }
+
+
     render() {
       return (
 
@@ -177,7 +185,7 @@ class App extends Component {
               <StandUpForm handleSubmit={(e) => this.handleSubmit(e)}/>
             </div>
             <div id="displayCol">
-              <Display deleteStandUp={(e) => this.handleDeleteStandUp(e)} standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
+              <Display updateStandUp={this.handleUpdateStandUp} deleteStandUp={(e) => this.handleDeleteStandUp(e)} standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
               
             </div>
           </div>
