@@ -120,6 +120,10 @@ class App extends Component {
       this.setState({...this.state, displaySignUp: !this.state.displaySignUp})
     }
 
+    handleSignOut = () => {
+      this.setState({displaySignUp: false, loggedIn: false, standUps: []})
+    }
+
 
     render() {
       return (
@@ -127,7 +131,7 @@ class App extends Component {
         <div id="application">
           <div id="topBar" >
             <Profile />
-            <Options signUp={this.state.displaySignUp} switchSignUpLogin={this.switchSignUpLogin} handleSignUp={this.handleSignUp} loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
+            <Options handleSignOut={this.handleSignOut} loggedInStatus={this.state.loggedIn} signUp={this.state.displaySignUp} switchSignUpLogin={this.switchSignUpLogin} handleSignUp={this.handleSignUp} loggedIn={this.state.loggedIn} handleLogin={this.handleLogin}/>
           </div>
     
           <div id="mainDisplayAndTeamsRow">

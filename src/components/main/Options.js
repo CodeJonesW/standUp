@@ -12,16 +12,28 @@ class Options extends Component {
         if(!this.props.signUp){
             return (
                 <div id="options">
-    
+                    {this.props.loggedInStatus ?
+                     <form style={{"height": "10vh"}} >
+                       <button className="mybutton">Another </button>
+                       <button className="mybutton"> Something</button>
+                       <button onClick={(e) => this.props.handleSignOut(e)} className="mybutton logOutButton"> Logout</button>
+                   </form>
+                     
+                     
+                     : 
+
                     <form style={{"height": "10vh"}} onClick={(e) => this.props.handleLogin(e)}>
                        
-                        <label>Email:</label>
-                        <input id="email" type="email"></input>
-                        <label>Password:</label>
-                        <input id="password" type="password"></input>
-                        <button className="mybutton" id="login">Login</button>
-                        <button onClick={(e) => this.props.switchSignUpLogin(e)} className="mybutton">  Sign Up</button>
-                    </form>
+                       <label>Email:</label>
+                       <input id="email" type="email"></input>
+                       <label>Password:</label>
+                       <input id="password" type="password"></input>
+                       <button className="mybutton" id="login">Login</button>
+                       <button onClick={(e) => this.props.switchSignUpLogin(e)} className="mybutton">  Sign Up</button>
+                   </form>
+                    
+                    }
+                    
     
                     
                 </div>
