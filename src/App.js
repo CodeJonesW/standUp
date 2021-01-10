@@ -157,7 +157,7 @@ class App extends Component {
           // console.log(data)
           this.setState({...this.state, standUps: data})
           console.log(this.state.standUps)
-          alert("StandUp Deleted")
+          
         })
       })
     }
