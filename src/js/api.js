@@ -7,6 +7,7 @@ const helpers = {
             method: "DELETE",
             headers: {
               'Content-Type': 'application/json',
+              'Authorization': localStorage.getItem("token")
             }
           })
     },
@@ -18,7 +19,7 @@ const helpers = {
               'Authorization': localStorage.getItem("token")
             }
           })
-    }
+    },
 }
 
 

@@ -95,10 +95,10 @@ body, html {
 #standUp {
   flex-direction: row;
   justify-content: center;
-  width: 80%;
-  height: 20%;
-  padding-left: 7%;
-  padding-right: 7%;
+  width: 60%;
+  /* height: 20%; */
+  padding-left: 15%;
+  padding-right: 15%;
   padding-top: 1%;
   background-color: rgb(104, 104, 104);
   margin: 2vh;
@@ -189,22 +189,21 @@ body, html {
   }
 
 
-  .myDeleteButton {
-    margin: 1px;
-    margin-top: 15px;
+  .myStandUpButton {
+    margin: 3%;
     width: 50px;
-    padding: 10px;
+    padding: 5px;
     border: none;
     -webkit-border-radius: 5px; 
     -moz-border-radius: 5px; 
     border-radius: 5px; 
     background-color: #636303;
-    font-size: 15px;
+    font-size: 10px;
     color: #fff;
     cursor: pointer;
   }
 
-  .myDeleteButton:hover {
+  .myStandUpButton:hover {
     background-color: #270759;
     }
 

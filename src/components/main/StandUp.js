@@ -6,7 +6,8 @@ function StandUp(props) {
             <li> Yesterday: {props.yesterday}</li>
             <li> Today: {props.today}</li>
             <li> Blocker: {props.blocker}</li>
-            <button id={props.standUpId} onClick={(e) => props.deleteStandUp(e)} className="myDeleteButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji ">❌</span> </button>
+            <button data-standupid={props.standUpId}  className="myStandUpButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji "> ✅</span> </button>
+            <button id={props.standUpId} onClick={(e) => props.deleteStandUp(e)} className="myStandUpButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji ">❌</span> </button>
         </ul>
     );
   }
