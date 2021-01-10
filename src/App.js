@@ -17,11 +17,6 @@ class App extends Component {
         }
     }
 
-    componentDidUpdate() {
-      console.log("updated")
-    };
-
-
     handleLogin = (e) => {
       e.preventDefault()
       if(e.target.id === "login"){
@@ -123,6 +118,19 @@ class App extends Component {
       this.setState({displaySignUp: false, loggedIn: false, standUps: []})
     }
 
+    handleDeleteStandUp = (e) => {
+      Helpers.deleteStandUp(e)
+      .then(()=> {
+        Helpers.findAllUserStandUps(this.state.userId)
+        .then(response => response.json())
+        .then((data) => {
+          // console.log(data)
+          this.setState({...this.state, standUps: data})
+          console.log(this.state.standUps)
+        })
+      })
+    }
+
 
     render() {
       return (
@@ -138,7 +146,7 @@ class App extends Component {
               <StandUpForm handleSubmit={(e) => this.handleSubmit(e)}/>
             </div>
             <div id="displayCol">
-              <Display deleteStandUp={Helpers.deleteStandUp} standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
+              <Display deleteStandUp={(e) => this.handleDeleteStandUp(e)} standUps={this.state.standUps} handleSubmit={this.handleSubmit}/>
               
             </div>
           </div>
