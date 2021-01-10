@@ -20,6 +20,15 @@ const helpers = {
             }
           })
     },
+    refreshUserToken: async (token) => {
+        return fetch(`http://localhost:3000/api/user/refresh`, {
+           method: "GET",
+           headers: {
+             'Content-Type': 'application/json',
+             'Authorization': token
+           }
+         })
+   },
 }
 
 

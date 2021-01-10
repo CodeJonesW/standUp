@@ -16,6 +16,23 @@ class App extends Component {
         }
     }
 
+    componentDidMount() {
+      let token = localStorage.getItem("token")
+      if(token){
+        Helpers.refreshUserToken(token)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          this.setState({loggedIn: true, userId: data.userId, standUps: data.standUps})
+          localStorage.setItem("token", data.newToken)
+        })
+
+      }
+    }
+    
+
+    
+
     handleLogin = (e) => {
       e.preventDefault()
       if(e.target.id === "login"){
