@@ -53,7 +53,7 @@ class App extends Component {
 
     handleSubmit = (e) => {
       e.preventDefault()
-      console.log(e.currentTarget)
+      // console.log(e.currentTarget)
 
       // implement user id !!
       if(!this.state.userId) {
@@ -75,7 +75,7 @@ class App extends Component {
           })
           .then(res => res.json())
           .then(standUpData => {
-            console.log(standUpData)
+            // console.log(standUpData)
             fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
             .then(res => res.json())
             .then(data => this.setState({...this.state, standUps: data}))
@@ -90,7 +90,7 @@ class App extends Component {
       if(e.target.id === "signUp"){
         
         let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
-        console.log(user)
+        // console.log(user)
         fetch("http://localhost:3000/api/users", {
           method: "post",
           headers: {
@@ -100,7 +100,7 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(userData =>  {
-          console.log(userData)
+          // console.log(userData)
           if(userData.msg){
             alert(userData.msg)
           } else {
@@ -115,7 +115,7 @@ class App extends Component {
     }
 
     handleSignOut = (e) => {
-      this.setState({displaySignUp: false, loggedIn: false, standUps: []})
+      this.setState({displaySignUp: false, loggedIn: false, standUps: [], userId: null})
     }
 
     handleDeleteStandUp = (e) => {
