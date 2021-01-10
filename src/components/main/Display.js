@@ -22,7 +22,7 @@ class Display extends Component {
             <div id="display">
               {this.props.standUps.map((x, index) => {
                 return (
-                    <StandUp deleteStandUp={(e) => this.props.deleteStandUp(e)} key={index} yesterday={x.yesterday} today={x.today} blocker={x.blocker} />
+                    <StandUp deleteStandUp={(e) => this.props.deleteStandUp(e)} key={index} yesterday={x.yesterday} today={x.today} blocker={x.blocker} standUpId={x.id} />
                 )
                 }, this)}  
               
