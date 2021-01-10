@@ -4,7 +4,6 @@ import Profile from './components/main/Profile'
 import Options from './components/main/Options'
 import Display from './components/main/Display'
 import StandUpForm from './components/main/StandUpForm'
-// import { div, Col } from 'react-bootstrap'
 import Helpers from './js/api'
 
 
@@ -32,10 +31,18 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(userData => {
+          // console.log(userData)
           if(userData.msg){
             alert(userData.msg)
           } else {
-            fetch(`http://localhost:3000/api/standUp/${userData.userId}`)
+            localStorage.setItem("token", userData.token)
+            fetch(`http://localhost:3000/api/standUp/${userData.userId}`, {
+              method: "GET",
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `${localStorage.token}`
+              } 
+            })
             .then(res => res.json())
             .then((data) => {
               this.setState(
