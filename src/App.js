@@ -131,8 +131,8 @@ class App extends Component {
       this.setState({displaySignUp: false, loggedIn: false, standUps: [], userId: null})
     }
 
-    handleDeleteStandUp = (e) => {
-      Helpers.deleteStandUp(e)
+    handleDeleteStandUp = async (e) => {
+      await Helpers.deleteStandUp(e)
       .then(()=> {
         Helpers.findAllUserStandUps(this.state.userId)
         .then(response => response.json())
@@ -140,6 +140,7 @@ class App extends Component {
           // console.log(data)
           this.setState({...this.state, standUps: data})
           console.log(this.state.standUps)
+          alert("StandUp Deleted")
         })
       })
     }
