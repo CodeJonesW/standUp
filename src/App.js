@@ -20,11 +20,6 @@ class App extends Component {
 
     componentDidUpdate() {
       console.log("updated")
-      const loggedInUser = localStorage.getItem("user");
-      if (loggedInUser) {
-        const foundUser = JSON.parse(loggedInUser);
-        console.log(foundUser)
-      }
     };
 
 
@@ -35,7 +30,7 @@ class App extends Component {
         let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
 
         fetch("http://localhost:3000/api/login", {
-          method: "post",
+          method: "POST",
           headers: {
             'Content-Type': 'application/json',
           },
@@ -43,16 +38,21 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(userData => {
-          fetch(`http://localhost:3000/api/standUp/${userData.userId}`)
-          .then(res => res.json())
-          .then((data) => {
-            this.setState(
-              { ...this.state,
-                userId: userData.userId,
-                loggedIn: userData.loggedInStatus,
-                standUps: data
-              })
-          }) 
+          if(userData.msg){
+            alert(userData.msg)
+          } else {
+            fetch(`http://localhost:3000/api/standUp/${userData.userId}`)
+            .then(res => res.json())
+            .then((data) => {
+              this.setState(
+                { ...this.state,
+                  userId: userData.userId,
+                  loggedIn: userData.loggedInStatus,
+                  standUps: data
+                })
+            }) 
+          }
+
         })
       }
     }
