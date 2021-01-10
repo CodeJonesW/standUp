@@ -166,6 +166,7 @@ class App extends Component {
       Helpers.updateStandUpById(standUpId)
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         this.setState({...this.state, standUps: data.standUps})
       })
     }

@@ -106,6 +106,20 @@ body, html {
   
 }
 
+#completeStandUp {
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  /* height: 20%; */
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 1%;
+  background-color: rgb(12, 107, 9);
+  margin: 2vh;
+  border-radius: 50px;
+  
+}
+
 #standUpFormDiv {
   justify-content: center;
   margin: 1%;
