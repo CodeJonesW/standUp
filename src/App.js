@@ -74,18 +74,22 @@ class App extends Component {
         }
   
         fetch("http://localhost:3000/api/standUp", {
-            method: "post",
+            method: "POST",
             headers: {
               'Content-Type': 'application/json',
+              "Authorization": localStorage.getItem("token")
             },
             body: JSON.stringify(newStandUp) 
           })
           .then(res => res.json())
           .then(standUpData => {
-            // console.log(standUpData)
-            fetch(`http://localhost:3000/api/standUp/${this.state.userId}`)
-            .then(res => res.json())
-            .then(data => this.setState({...this.state, standUps: data}))
+            Helpers.findAllUserStandUps(this.state.userId)
+            .then(response => response.json())
+            .then((data) => {
+              this.setState({...this.state, standUps: data})
+              console.log(this.state.standUps)
+            })
+            
           })
       }
     }
@@ -112,6 +116,7 @@ class App extends Component {
             alert(userData.msg)
           } else {
             alert("Account Created")
+            this.switchSignUpLogin()
           }
         })
       }
@@ -122,6 +127,7 @@ class App extends Component {
     }
 
     handleSignOut = (e) => {
+      localStorage.clear()
       this.setState({displaySignUp: false, loggedIn: false, standUps: [], userId: null})
     }
 

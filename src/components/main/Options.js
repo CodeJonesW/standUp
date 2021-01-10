@@ -14,8 +14,6 @@ class Options extends Component {
                 <div id="options">
                     {this.props.loggedInStatus ?
                      <form style={{"height": "10vh"}} >
-                       <button className="mybutton">Another </button>
-                       <button className="mybutton"> Something</button>
                        <button onClick={(e) => this.props.handleSignOut(e)} className="mybutton logOutButton"> Logout</button>
                    </form>
                      
