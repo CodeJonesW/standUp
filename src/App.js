@@ -39,7 +39,7 @@ class App extends Component {
       
         let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
 
-        fetch("http://localhost:3000/api/login", {
+        fetch("https://fast-reaches-85589.herokuapp.com/api/login", {
           method: "POST",
           headers: {
             'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ class App extends Component {
             alert(userData.msg)
           } else {
             localStorage.setItem("token", userData.token)
-            fetch(`http://localhost:3000/api/standUp/${userData.userId}`, {
+            fetch(`https://fast-reaches-85589.herokuapp.com/api/standUp/${userData.userId}`, {
               method: "GET",
               headers: {
                 'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ class App extends Component {
           userId: this.state.userId
         }
   
-        fetch("http://localhost:3000/api/standUp", {
+        fetch("https://fast-reaches-85589.herokuapp.com/api/standUp", {
             method: "POST",
             headers: {
               'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ class App extends Component {
         
         let user = { email: e.currentTarget.email.value, password: e.currentTarget.password.value };
         // console.log(user)
-        fetch("http://localhost:3000/api/users", {
+        fetch("https://fast-reaches-85589.herokuapp.com/api/users", {
           method: "post",
           headers: {
             'Content-Type': 'application/json',

@@ -3,7 +3,7 @@
 const helpers = {
     deleteStandUp: async (e) => {
         // console.log(e.currentTarget)
-        return fetch(`http://localhost:3000/api/standUp/${e.currentTarget.id}`, {
+        return fetch(`https://fast-reaches-85589.herokuapp.com/api/standUp/${e.currentTarget.id}`, {
             method: "DELETE",
             headers: {
               'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ const helpers = {
           })
     },
     findAllUserStandUps: async (userId) => {
-         return fetch(`http://localhost:3000/api/standUp/${userId}`, {
+         return fetch(`https://fast-reaches-85589.herokuapp.com/api/standUp/${userId}`, {
             method: "GET",
             headers: {
               'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ const helpers = {
           })
     },
     refreshUserToken: async (token) => {
-        return fetch(`http://localhost:3000/api/user/refresh`, {
+        return fetch(`https://fast-reaches-85589.herokuapp.com/api/user/refresh`, {
            method: "GET",
            headers: {
              'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ const helpers = {
          })
    },
    updateStandUpById: async (standUpId) => {
-    return fetch(`http://localhost:3000/api/standUp/${standUpId}`, {
+    return fetch(`https://fast-reaches-85589.herokuapp.com/api/standUp/${standUpId}`, {
        method: "POST",
        headers: {
          'Content-Type': 'application/json',
