@@ -24,7 +24,7 @@ class App extends Component {
         .then(data => {
           // console.log(data)
           this.setState({loggedIn: true, userId: data.userId, standUps: data.standUps})
-          localStorage.setItem("token", data.newToken)
+          localStorage.setItem("token", data.token)
         })
 
       }
