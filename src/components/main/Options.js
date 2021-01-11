@@ -20,14 +20,13 @@ class Options extends Component {
                      
                      : 
 
-                    <form style={{"height": "10vh"}} onClick={(e) => this.props.handleLogin(e)}>
+                    <form  style={{"height": "10vh", "display": "inline-block"}} onClick={(e) => this.props.handleLogin(e)}>
                        
-                       <label>Email:</label>
-                       <input id="email" type="email"></input>
-                       <label>Password:</label>
-                       <input id="password" type="password"></input>
-                       <button className="mybutton" id="login">Login</button>
-                       <button onClick={(e) => this.props.switchSignUpLogin(e)} className="mybutton">  Sign Up</button>
+                      
+                       <input className="loginInputs" placeholder="Email" id="email" type="email"></input>
+                       <input className="loginInputs" placeholder="Password" id="password" type="password"></input>
+                       <button className="myLoginbuttons " id="login">Login</button>
+                       <button onClick={(e) => this.props.switchSignUpLogin(e)} className="myLoginbuttons">  Sign Up</button>
                    </form>
                     
                     }
@@ -41,11 +40,11 @@ class Options extends Component {
                 <div id="options">
     
                     <form style={{"height": "10vh"}} id="signUpOptions" onClick={(e) => this.props.handleSignUp(e)}>
-                        <input placeholder="Sign up with your Email:" id="email" type="email"></input>
-                        <input placeholder="Your Password:" id="password" type="password"></input>
+                        <input className="myLoginInputs" placeholder="Sign up with your Email:" id="email" type="email"></input>
+                        <input className="myLoginInputs" placeholder="Your Password:" id="password" type="password"></input>
                         {/* <input placeholder="Confirm Password:" id="passwordConfirm" type="password"></input> */}
-                        <button id="signUp" className="mybutton"> Sign Up</button>
-                        <button  onClick={(e) => this.props.switchSignUpLogin(e)} className="mybutton"> Joined?</button>
+                        <button id="signUp" className="myLoginbuttons"> SignUp</button>
+                        <button  onClick={(e) => this.props.switchSignUpLogin(e)} className="myLoginbuttons"> Joined?</button>
                     </form>
     
                     

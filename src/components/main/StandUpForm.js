@@ -10,13 +10,13 @@ class StandUpForm extends Component {
             <div id="standUpFormDiv">
                 <form onSubmit={(e) => this.props.handleSubmit(e)} id="standUpForm" action="/">
                     <div className="item">
-                        <textarea id="yesterday" placeholder="Yesterday:" rows="2"></textarea>
+                        <textarea className="myTextArea" id="yesterday" placeholder="Yesterday:" rows="2"></textarea>
                     </div>
                     <div className="item">
-                        <textarea id="today" placeholder="Today:" rows="2"></textarea>
+                        <textarea className="myTextArea" id="today" placeholder="Today:" rows="2"></textarea>
                     </div>
                     <div className="item">
-                        <textarea id="blocker" placeholder="Blockers:" rows="2"></textarea>
+                        <textarea className="myTextArea" id="blocker" placeholder="Blockers:" rows="2"></textarea>
                     </div>
                     {/* <div className="item">
                         Seeking help?<input name="help" type="checkbox" />
