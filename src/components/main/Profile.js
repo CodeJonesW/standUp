@@ -8,7 +8,8 @@ class Profile extends Component {
     render() {
             return (
                 <div id="profile">
-                    <p>StandUp @ </p>
+                    {/* <p>StandUp @ </p> */}
+                    <img id="standUpLogo" src="../../standUp.png"></img>
                 </div>
                 );
        

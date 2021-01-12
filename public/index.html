@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/standUp.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Daily Personal StandUp"
     />
     <link rel="apple-touch-icon" href="logo192.png" />
     <!--
@@ -24,7 +24,32 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCmGUKSFXP-1Yi3lh9CSc2bZvMb0Zj2zcQ",
+    authDomain: "standup-eba73.firebaseapp.com",
+    projectId: "standup-eba73",
+    storageBucket: "standup-eba73.appspot.com",
+    messagingSenderId: "254561775192",
+    appId: "1:254561775192:web:4424258fb1f95cd9fa642d",
+    measurementId: "G-TR051XD6HH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+    <title>StandUp</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
