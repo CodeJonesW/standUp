@@ -9,7 +9,7 @@ class Profile extends Component {
             return (
                 <div id="profile">
                     {/* <p>StandUp @ </p> */}
-                    <img src="../../standUp.png"></img>
+                    <img id="standUpLogo" src="../../standUp.png"></img>
                 </div>
                 );
        
