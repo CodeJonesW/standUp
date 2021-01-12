@@ -111,7 +111,7 @@ class App extends Component {
 
     handleSignUp = (e) => {
 
-      console.log(e.target)
+      // console.log(e.target)
       e.preventDefault()
       if(e.target.id === "signUp"){
         
@@ -154,7 +154,7 @@ class App extends Component {
         .then((data) => {
           // console.log(data)
           this.setState({...this.state, standUps: data})
-          console.log(this.state.standUps)
+          // console.log(this.state.standUps)
           
         })
       })
@@ -166,7 +166,7 @@ class App extends Component {
       Helpers.updateStandUpById(standUpId)
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         this.setState({...this.state, standUps: data.standUps})
       })
     }
