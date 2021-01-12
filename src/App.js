@@ -102,7 +102,7 @@ class App extends Component {
             .then(response => response.json())
             .then((data) => {
               this.setState({...this.state, standUps: data})
-              console.log(this.state.standUps)
+              // console.log(this.state.standUps)
             })
             
           })
