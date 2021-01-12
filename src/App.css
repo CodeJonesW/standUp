@@ -21,7 +21,6 @@ body, html {
   display: flex;
   flex-direction: row;
   height: 10vh;
-  min-height: 40px;
 
   /* justify-content: center; */
 }
@@ -86,6 +85,12 @@ body, html {
     padding-top: 5%;
   }
 }
+
+/* @media only screen and (max-height: 630px) {
+  #loginForm {
+    padding-top: 1%;
+  }
+} */
 
 #teams{
   align-items: center;
