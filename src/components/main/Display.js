@@ -14,7 +14,19 @@ class Display extends Component {
         if(!this.props.standUps){
             return (
                 <div id="display">
-                    
+                    <ul id="standUp">
+                        <li> Welcome to StandUp </li>
+                        <li> A app for developers to record their thoughts in a standUp format </li>
+                        <button  disabled    className="myStandUpButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji "> ✅</span> </button>
+                        <button  disabled className="myStandUpButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji ">❌</span> </button>
+                    </ul>
+                    <ul id="completeStandUp">
+                        <li> Yesterday: find StandUp</li>
+                        <li> Today: Login, start recording</li>
+                        <li> Blocker: none</li>
+                        <button  disabled    className="myStandUpButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji "> ✅</span> </button>
+                        <button  disabled className="myStandUpButton"> <span aria-labelledby="jsx-a11y/aria-proptypes" role="img" alt="emoji ">❌</span> </button>
+                    </ul>
                 </div>
             )
         } else {
