@@ -40,8 +40,8 @@ class Options extends Component {
                 <div id="options">
     
                     <form  id="signUpOptions" onClick={(e) => this.props.handleSignUp(e)}>
-                        <input className="loginInputs" placeholder="Sign up with your Email:" id="email" type="email"></input>
-                        <input className="loginInputs" placeholder="Your Password:" id="password" type="password"></input>
+                        <input className="signUpInputs" placeholder="Sign up with your Email:" id="email" type="email"></input>
+                        <input className="signUpInputs" placeholder="Your Password:" id="password" type="password"></input>
                         {/* <input placeholder="Confirm Password:" id="passwordConfirm" type="password"></input> */}
                         <button id="signUp" className="myLoginbuttons"> SignUp</button>
                         <button  onClick={(e) => this.props.switchSignUpLogin(e)} className="myLoginbuttons"> Joined?</button>
