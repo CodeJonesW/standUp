@@ -11,14 +11,6 @@ Runs on a free heroku dyno so it takes a second to wake up server
 
 standUp is an app to record personal standUps
 
-## User Story
-
-```
-Users can signup or login into a standUp account
-Users can Create and Delete StandUps
-Users can update complete status of standUp
-```
-
 ### Technologies
 
 * React
